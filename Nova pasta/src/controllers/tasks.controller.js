@@ -61,3 +61,10 @@ const [rows] = await pool.query("select id, title, created_at from tasks where i
 return res.status(201).send({
     tasks: rows
 })
+
+export {
+    lsitTasks,
+    getTask,
+    createTask,
+    updateTask,
+}
