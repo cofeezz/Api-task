@@ -5,5 +5,7 @@ const router = Router()
 
 router.get("/", lsitTasks)
 router.get("/:id", getTask)
+router.post("/", createTask)
+router.put("/", updateTasks)
 
 export default router

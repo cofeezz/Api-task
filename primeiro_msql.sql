@@ -14,3 +14,4 @@ insert into tasks (title) values ('Primeira task criada no Workbanch');
 
 select * from tasks;
 
+update tasks set title = "Atualizado pelo sql script" where id = 1;
