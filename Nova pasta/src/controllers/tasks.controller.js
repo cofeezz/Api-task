@@ -62,6 +62,21 @@ return res.status(201).send({
     tasks: rows
 })
 
+async function deletTasks(req, res) {
+    const id = Number(req.params.id)
+
+    if (!Number.isFinite(id)) {
+        return res.status(400).send({
+            message: "id invalido"
+        })
+    }
+    const [result] = await pool.query("delete from tasks where id = ?", [id])
+    
+    return res.status(400).send({
+        message: "task deletado com sucesso"
+    })
+}
+
 export {
     lsitTasks,
     getTask,
